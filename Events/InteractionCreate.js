@@ -2,7 +2,7 @@ const client = require('../index');
 const {owners} = require("../json/owners.json")
 const { EmbedBuilder, Message} = require("discord.js")
 const emoji = '<:xmark:1044634264416817292>'
-const ownerid = process.env.OWNERID
+const ownerid = process.env.OWNERID //Your ID
 
 
 client.on("interactionCreate", async (interaction) => {
@@ -72,7 +72,7 @@ client.on("interactionCreate", async (interaction) => {
     try{
         await command.run(client, interaction, args)//.catch(err => {interaction.followUp({content: `\n\n**__Error Information:__**\nButton: ${command}\n\`\`\`${err}\`\`\``, ephemeral: true})})
     } catch(err) {
-        {interaction.followUp({content: `Please send this information to <@574217755692236803>. \n\n**__Error Information:__**\nButton: ${command}\n\`\`\`${err}\`\`\``, ephemeral: true})}
+        {interaction.followUp({content: `**__Error Information:__**\nButton: ${command}\n\`\`\`${err}\`\`\``, ephemeral: true})}
     }
 
  
@@ -86,7 +86,7 @@ client.on("interactionCreate", async (interaction) => {
             const disabledembed = new EmbedBuilder()
             .setTitle("Command Not Executed")
             .setColor("Red")
-            .setDescription(`You are unable to execute any slash commands at this time. They have been temporarily disabled by <@${ownerid}>`)
+            .setDescription(`You are unable to execute any slash commands at this time. They have been temporarily.`)
             .setTimestamp()
             interaction.reply({embeds: [disabledembed], ephemeral: true})
         }})
@@ -101,7 +101,6 @@ client.on("interactionCreate", async (interaction) => {
         {name: `User ID:`, value: `${interaction.user.id}`},
         {name: `Blacklist Reason:`, value: `${data.Reason}`},    
         {name: `Blacklisted At:`, value: `${data.Time}`},    
-        {name: `Want to appeal?`, value: `Join our [support server](https://discord.gg/JDnnSqrP3d)`}
     )
     .setTimestamp()
     const globallogchannel = process.env.GLOBAL_LOG_CHANNEL;
