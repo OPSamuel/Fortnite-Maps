@@ -12,13 +12,13 @@ client.on("messageCreate", async (message) => {
 
     if(message.content.toLowerCase() === `fm!admin ping`) {
         //if (!client.guilds.cache.get('1031306940564910260').members.cache.get(message.author.id).roles.cache.has('1047189599820189747')) return;
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator) && message.author.id !== '574217755692236803') return message.delete();
+        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('')//Enter your log channel ID
 
             const {dependencies} = require('../package.json');
             const ver = dependencies['discord.js']
-            const tick = '<a:TICK:995018408737374308>'
+            const tick = '<a:TICK:995018408737374308>' //A tick emoji ID thingy
             const pingembed = new EmbedBuilder()
             .setColor("Green")
             .setTitle(`${tick} Pong!`)
@@ -45,15 +45,15 @@ client.on("messageCreate", async (message) => {
     if(message.content.toLowerCase() === `fm!admin summary`) {
 
     //if (!client.guilds.cache.get('1031306940564910260').members.cache.get(message.author.id).roles.cache.has('1047189599820189747')) return;
-    if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator) && message.author.id !== '574217755692236803') return message.delete();
+    if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
         setTimeout(function () {
             message.delete()
             }, ms('10s'));
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('') //Enter your log channel ID
         const membercount = message.guild.memberCount
         const rolecount = message.guild.roles.cache.size
-        const tick = '<a:TICK:995018408737374308>'
+        const tick = '<a:TICK:995018408737374308>' //A tick emoji ID thingy
 
         const summary = new EmbedBuilder()
 
@@ -94,9 +94,9 @@ client.on("messageCreate", async (message) => {
             }, ms('60s'));
     }
     if(message.content.toLowerCase() === 'fm!admin perms'){
-        if (message.author.id !== '574217755692236803') return message.delete();
+    if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('')  //Enter your log channel ID
 
         setTimeout(function () {
             message.delete()
@@ -123,9 +123,9 @@ client.on("messageCreate", async (message) => {
     }
     if(message.content.toLowerCase() === 'fm!admin enable commands'){
 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator) && message.author.id !== '574217755692236803') return message.delete();
+        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('') //Enter your log channel ID
 
         setTimeout(function () {
             message.delete()
@@ -157,9 +157,9 @@ client.on("messageCreate", async (message) => {
     }
     if(message.content.toLowerCase() === 'fm!admin enable slashcommands'){
                 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator) && message.author.id !== '574217755692236803') return message.delete();
+        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('') //Enter your log channel ID
 
         setTimeout(function () {
             message.delete()
@@ -190,9 +190,9 @@ client.on("messageCreate", async (message) => {
     }
     if(message.content.toLowerCase() === 'fm!admin disable commands'){
                 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator) && message.author.id !== '574217755692236803') return message.delete();
+        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('') //Enter your log channel ID
 
         setTimeout(function () {
             message.delete()
@@ -224,9 +224,9 @@ client.on("messageCreate", async (message) => {
     }
     if(message.content.toLowerCase() === 'fm!admin disable slashcommands'){
 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator) && message.author.id !== '574217755692236803') return message.delete();
+        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('')  //Enter your log channel ID
 
         setTimeout(function () {
             message.delete()
@@ -258,9 +258,9 @@ client.on("messageCreate", async (message) => {
     }
     if(message.content.toLowerCase() === 'fm!admin view'){
 
-        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator) && message.author.id !== '574217755692236803') return message.delete();
+        if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
-        const logchannel = client.channels.cache.get('1219025752671129661')
+        const logchannel = client.channels.cache.get('')  //Enter your log channel ID
 
 
         setTimeout(function () {
