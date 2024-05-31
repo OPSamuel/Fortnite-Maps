@@ -11,7 +11,6 @@ const systems = require("../Schemas/Systems");
 client.on("messageCreate", async (message) => {
 
     if(message.content.toLowerCase() === `fm!admin ping`) {
-        //if (!client.guilds.cache.get('1031306940564910260').members.cache.get(message.author.id).roles.cache.has('1047189599820189747')) return;
         if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
 
         const logchannel = client.channels.cache.get('')//Enter your log channel ID
@@ -44,7 +43,6 @@ client.on("messageCreate", async (message) => {
     }
     if(message.content.toLowerCase() === `fm!admin summary`) {
 
-    //if (!client.guilds.cache.get('1031306940564910260').members.cache.get(message.author.id).roles.cache.has('1047189599820189747')) return;
     if (!message.member.permissions.has(PermissionsBitField.Flags.Administrator)) return message.delete();
         setTimeout(function () {
             message.delete()
